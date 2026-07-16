@@ -1,35 +1,56 @@
-// Smooth scroll for navigation links
+// ===== Header shadow on scroll =====
+const header = document.getElementById('site-header');
+const onScroll = () => {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 8);
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// ===== Mobile nav toggle =====
+const toggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.querySelectorAll('a').forEach(a =>
+        a.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        })
+    );
+}
+
+// ===== Smooth scroll for same-page anchors =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const id = this.getAttribute('href');
+        if (id === '#' || id.length < 2) return;
+        const target = document.querySelector(id);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
 });
 
-// Simple reveal animation on scroll
-const revealElements = document.querySelectorAll('.research-card, .stat-card, .about-text');
+// ===== Scroll reveal via IntersectionObserver =====
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && reveals.length) {
+    const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+} else {
+    reveals.forEach(el => el.classList.add('in'));
+}
 
-const revealOnScroll = () => {
-    for (let i = 0; i < revealElements.length; i++) {
-        let windowHeight = window.innerHeight;
-        let elementTop = revealElements[i].getBoundingClientRect().top;
-        let elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-            revealElements[i].style.opacity = '1';
-            revealElements[i].style.transform = 'translateY(0)';
-        }
-    }
-};
-
-// Initial state for animation
-revealElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.8s ease-out';
-});
-
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll(); // Trigger once on load
+// ===== Current year in footer =====
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();

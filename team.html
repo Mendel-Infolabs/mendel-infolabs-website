@@ -4,28 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team | Mendel Info Labs LLC</title>
-    <meta name="description" content="Meet the leadership team at Mendel Info Labs LLC.">
+    <title>Leadership | Mendel Info Labs</title>
+    <meta name="description" content="Meet the leadership team of Mendel Info Labs — operators and scientists building trust-first AI and advancing AI for the life sciences.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+            <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+            <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+            <symbol id="i-li" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5A1.94 1.94 0 113 5a1.94 1.94 0 013.94 0zM3.3 8.5h3.28V21H3.3V8.5zM9.36 8.5h3.14v1.71h.05c.44-.83 1.5-1.71 3.1-1.71 3.32 0 3.93 2.18 3.93 5v6.5h-3.28v-5.76c0-1.37-.02-3.14-1.91-3.14-1.92 0-2.21 1.5-2.21 3.04V21H9.36V8.5z"/></symbol>
+        </defs>
+    </svg>
+
+    <header id="site-header">
         <nav class="container">
-            <a href="index.html" class="logo" style="text-decoration: none;">
-                <img src="logo.png" alt="Mendel Info Labs Logo" id="site-logo">
+            <a href="index.html" class="logo" aria-label="Mendel Info Labs home">
+                <img src="logo.png" alt="Mendel Info Labs">
             </a>
-            <ul class="nav-links">
-                <li><a href="index.html#about">About</a></li>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg><use href="#i-menu"/></svg>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#platform">Platform</a></li>
+                <li><a href="index.html#products">Products</a></li>
                 <li><a href="index.html#research">Research</a></li>
                 <li><a href="team.html">Team</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#contact" class="btn btn-primary">Get in touch</a></li>
             </ul>
         </nav>
     </header>
@@ -33,60 +46,96 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1>Our Scientific Team</h1>
-                <p>A multidisciplinary group of researchers dedicated to informational science.</p>
+                <span class="eyebrow" style="justify-content:center;color:var(--teal-bright);">Leadership</span>
+                <h1>The people behind Mendel</h1>
+                <p>A multidisciplinary team spanning enterprise AI, company-building, and the life sciences — united by a
+                    conviction that the most valuable AI is the most trustworthy.</p>
             </div>
         </section>
 
-        <section class="container" style="padding-bottom: 8rem;">
-            <div class="team-grid">
-                <!-- Team Member 1 -->
-                <div class="team-card">
-                    <div class="team-img-placeholder">👤</div>
-                    <h3>CEO</h3>
-                    <div class="role">Chief Executive Officer</div>
-                    <p class="bio">Visionary leader driving the strategic direction and growth of Mendel Info Labs.</p>
+        <section class="section" style="padding-top:5rem;">
+            <div class="container">
+                <div class="team-grid reveal">
+                    <div class="team-card">
+                        <div class="team-avatar">LL</div>
+                        <h3>Leo Linbeck</h3>
+                        <div class="role">Chief Executive Officer</div>
+                        <p class="bio">Sets the strategic direction and growth of Mendel Info Labs. A veteran
+                            entrepreneur and investor, he brings decades of experience building and scaling ventures
+                            across technology, construction, and the life sciences — including the founding of Fannin's
+                            life-sciences innovation model.</p>
+                        <a class="li" href="https://www.linkedin.com/in/leo-linbeck-88482127/" target="_blank" rel="noopener">
+                            <svg><use href="#i-li"/></svg> LinkedIn</a>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">LL</div>
+                        <h3>Leo Linbeck</h3>
+                        <div class="role">Chief Financial Officer</div>
+                        <p class="bio">Leads financial strategy and capital stewardship. He structures the Mendel model
+                            so that recurring product revenue sustainably funds long-horizon research, keeping the studio
+                            disciplined, independent, and focused on compounding value.</p>
+                        <a class="li" href="https://www.linkedin.com/in/leo-linbeck/" target="_blank" rel="noopener">
+                            <svg><use href="#i-li"/></svg> LinkedIn</a>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">AG</div>
+                        <h3>Aki Gogikar</h3>
+                        <div class="role">Executive Vice President</div>
+                        <p class="bio">Leads product and engineering across Mendel's AI portfolio — the OneNew private AI
+                            suite (Workspace, API, and DB) and the ActPass agent-governance engine. He turns frontier AI
+                            into shippable, trust-first software that regulated organizations can adopt with confidence.</p>
+                        <a class="li" href="https://www.linkedin.com/in/akigogikar/" target="_blank" rel="noopener">
+                            <svg><use href="#i-li"/></svg> LinkedIn</a>
+                    </div>
                 </div>
 
-                <!-- Team Member 2 -->
-                <div class="team-card">
-                    <div class="team-img-placeholder">📊</div>
-                    <h3>CFO</h3>
-                    <div class="role">Chief Financial Officer</div>
-                    <p class="bio">Managing financial operations and ensuring the company's long-term fiscal health.</p>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="team-card">
-                    <div class="team-img-placeholder">🤝</div>
-                    <h3>Exec VP</h3>
-                    <div class="role">Executive Vice President</div>
-                    <p class="bio">Overseeing operational efficiency and organizational development.</p>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="team-card">
-                    <div class="team-img-placeholder">🛠️</div>
-                    <h3>Head of Engineering</h3>
-                    <div class="role">Technical Leadership</div>
-                    <p class="bio">Leading the development of our core technologies and computational frameworks.</p>
+                <div style="text-align:center;margin-top:4rem;" class="reveal">
+                    <a href="index.html#contact" class="btn btn-primary btn-lg">Work with us <svg><use href="#i-arrow"/></svg></a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <img src="logo.png" alt="Mendel Info Labs Logo" class="footer-logo-img">
-                <p>&copy; 2026 Mendel Info Labs LLC. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Mendel Info Labs">
+                    <p>A research-driven venture studio building trust-first AI products and advancing AI for the life
+                        sciences.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Products</h5>
+                    <ul>
+                        <li><a href="https://www.onenew.ai/" target="_blank" rel="noopener">OneNew Workspace</a></li>
+                        <li><a href="index.html#platform">OneNew API</a></li>
+                        <li><a href="index.html#platform">OneNew DB</a></li>
+                        <li><a href="https://www.actpass.org/" target="_blank" rel="noopener">ActPass</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="index.html#research">Research</a></li>
+                        <li><a href="index.html#model">Our model</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year">2026</span> Mendel Info Labs LLC. All rights reserved.</span>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/akigogikar/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a>
+                    <a href="mailto:info@mendelinfolabs.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+                </div>
             </div>
         </div>
     </footer>

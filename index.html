@@ -4,85 +4,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mendel Info Labs LLC | Advancing Information Science</title>
+    <title>Mendel Info Labs — Private AI & Deep-Tech Bio Ventures</title>
     <meta name="description"
-        content="Mendel Info Labs LLC is dedicated to exploring the fundamental limits and applications of information theory in biological and computational systems.">
+        content="Mendel Info Labs builds and operates trust-first AI products — the OneNew private AI suite and ActPass AI-agent governance — and advances AI-driven raptamer discovery with Fannin. Research funded by product revenue.">
+    <meta property="og:title" content="Mendel Info Labs — Private AI & Deep-Tech Bio Ventures">
+    <meta property="og:description"
+        content="A research-driven venture studio building trust-first AI products and advancing AI for the life sciences.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <!-- ===== SVG icon sprite ===== -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+            <symbol id="i-workspace" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 18v2M16 18v2M6 20h12"/></symbol>
+            <symbol id="i-api" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+            <symbol id="i-db" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></symbol>
+            <symbol id="i-gavel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l7 7-3 3-7-7 3-3zM11 6l-8 8M9 12l3 3-6 6-3-3 6-6z"/></symbol>
+            <symbol id="i-dna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3c0 6 10 6 10 12M17 3c0 6-10 6-10 12M7 21c0-2 10-2 10-6M17 21c0-2-10-2-10-6M8 6h8M9 9h6M9 15h6M8 18h8"/></symbol>
+            <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></symbol>
+            <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 000-9 6 6 0 00-11.5 2A3.5 3.5 0 006 19h11.5z"/></symbol>
+            <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+            <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2L20 3M17 6l2 2M14 9l2 2"/></symbol>
+            <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8l-5-5z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+            <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></symbol>
+            <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007 0l3-3a5 5 0 00-7-7l-1.5 1.5M14 11a5 5 0 00-7 0l-3 3a5 5 0 007 7l1.5-1.5"/></symbol>
+            <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></symbol>
+            <symbol id="i-warn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9L2 18a2 2 0 001.7 3h16.6a2 2 0 001.7-3L14 3.9a2 2 0 00-3.5 0z"/></symbol>
+            <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+            <symbol id="i-seal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 14.5L8 22l4-2 4 2-1-7.5M9.5 9l1.5 1.5L15 7"/></symbol>
+            <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+            <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+            <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+            <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L5 18a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/><path d="M7.5 14h9"/></symbol>
+            <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+            <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0112 0M16 5.5a3.5 3.5 0 010 6.5M18 20a6 6 0 00-3-5"/></symbol>
+            <symbol id="i-li" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5A1.94 1.94 0 113 5a1.94 1.94 0 013.94 0zM3.3 8.5h3.28V21H3.3V8.5zM9.36 8.5h3.14v1.71h.05c.44-.83 1.5-1.71 3.1-1.71 3.32 0 3.93 2.18 3.93 5v6.5h-3.28v-5.76c0-1.37-.02-3.14-1.91-3.14-1.92 0-2.21 1.5-2.21 3.04V21H9.36V8.5z"/></symbol>
+            <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0115-6.7L21 8M21 3v5h-5M21 12a9 9 0 01-15 6.7L3 16M3 21v-5h5"/></symbol>
+        </defs>
+    </svg>
+
+    <header id="site-header">
         <nav class="container">
-            <a href="index.html" class="logo" style="text-decoration: none;">
-                <img src="logo.png" alt="Mendel Info Labs Logo" id="site-logo">
+            <a href="index.html" class="logo" aria-label="Mendel Info Labs home">
+                <img src="logo.png" alt="Mendel Info Labs">
             </a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg><use href="#i-menu"/></svg>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#platform">Platform</a></li>
+                <li><a href="#products">Products</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="team.html">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn btn-primary">Get in touch</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- ===== HERO ===== -->
         <section class="hero">
-            <div class="container hero-content">
-                <h1>Sustainably Funding <span class="highlight">AGI & Bioinformatics</span> Breakthroughs</h1>
-                <p>Mendel Info Labs reinvests product revenue into long-horizon research, building responsible pathways
-                    to foundational scientific discoveries.</p>
-                <div class="hero-btns">
-                    <a href="https://www.onenew.ai/" class="btn btn-primary">OneNewAI Chatbot</a>
-                    <a href="#research" class="btn btn-secondary">Our Research</a>
+            <div class="container">
+                <div class="hero-inner">
+                    <span class="hero-badge">
+                        <span class="tag">Studio</span>
+                        <b>Mendel Info Labs</b><span class="badge-tail">&nbsp;— building &amp; operating trust-first AI</span>
+                    </span>
+                    <h1>Trust-first AI, <span class="grad">engineered for regulated work.</span></h1>
+                    <p class="lead">Mendel Info Labs designs, ships, and operates AI products where privacy and
+                        verifiability are non-negotiable — the OneNew private AI suite and the ActPass agent-governance
+                        engine — while advancing AI-driven discovery in the life sciences with Fannin.</p>
+                    <div class="hero-btns">
+                        <a href="#products" class="btn btn-primary btn-lg">Explore the portfolio <svg><use href="#i-arrow"/></svg></a>
+                        <a href="#contact" class="btn btn-ghost btn-lg">Talk to the team</a>
+                    </div>
+                    <div class="hero-meta">
+                        <div class="item"><div class="k">3</div><div class="v">Shipping products</div></div>
+                        <div class="item"><div class="k">SOC&nbsp;2 · HIPAA</div><div class="v">Aligned by design</div></div>
+                        <div class="item"><div class="k">Days</div><div class="v">To deploy, not months</div></div>
+                        <div class="item"><div class="k">2</div><div class="v">Verticals: AI &amp; bio</div></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="product" class="product">
+        <!-- ===== TRUST STRIP ===== -->
+        <div class="trust">
             <div class="container">
-                <div class="section-header">
-                    <h2>Our Product: OneNewAI</h2>
-                    <div class="underline"></div>
-                    <p class="section-subtitle">A streamlined, privacy-focused RAG chatbot designed for efficient
-                        company knowledge management.</p>
+                <span class="lbl">Built for due diligence</span>
+                <span class="badge"><svg><use href="#i-shield"/></svg> SOC 2 &amp; HIPAA-aligned controls</span>
+                <span class="badge"><svg><use href="#i-cloud"/></svg> Sovereign-cloud deployment</span>
+                <span class="badge"><svg><use href="#i-seal"/></svg> Tamper-evident audit trails</span>
+                <span class="badge"><svg><use href="#i-lock"/></svg> Customer-owned data</span>
+            </div>
+        </div>
+
+        <!-- ===== PORTFOLIO ===== -->
+        <section id="products" class="section">
+            <div class="container">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">The portfolio</span>
+                    <h2>One studio. A focused set of products that earn their trust.</h2>
+                    <p>Each product ships to real customers today. Together they form a coherent thesis: AI is only
+                        adoptable in serious industries when privacy, control, and proof are built in from the first line
+                        of code.</p>
                 </div>
-                <div class="product-grid">
-                    <div class="product-info">
-                        <h3>Simplicity-First Intelligence</h3>
-                        <p>OneNewAI is a cost-effective conversational platform for knowledge workers and small teams.
-                            We've removed the complexity to focus on the essentials: vector search, document chat, and
-                            Retrieval-Augmented Generation (RAG).</p>
-                        <ul class="product-features">
-                            <li><strong>Vector Search:</strong> Instantly find information across your entire document
-                                library.</li>
-                            <li><strong>Document Chat:</strong> Interact directly with your PDFs, docs, and
-                                spreadsheets.</li>
-                            <li><strong>Privacy-Focused:</strong> Designed to keep your company knowledge secure and
-                                private.</li>
-                        </ul>
-                        <div style="margin-top: 2rem;">
-                            <a href="https://www.onenew.ai/" class="btn btn-primary">Get Started with
-                                OneNewAI</a>
-                        </div>
-                    </div>
-                    <div class="product-visual">
-                        <div class="app-mockup">
-                            <div class="mockup-header">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
+                <div class="portfolio-grid">
+                    <a href="#platform" class="pf-card wide reveal">
+                        <span class="pf-tag">Live</span>
+                        <div class="pf-icon"><svg><use href="#i-shield"/></svg></div>
+                        <span class="kicker">OneNew · Private AI Suite</span>
+                        <h3>OneNew Workspace, API &amp; DB</h3>
+                        <p>A fully managed, private AI platform that runs on your own sovereign cloud — the Workspace for
+                            teams, the API for developers, and the DB for retrieval — with native SOC 2 &amp;
+                            HIPAA-aligned controls for sensitive data.</p>
+                        <span class="pf-foot">See the platform <svg><use href="#i-arrow"/></svg></span>
+                    </a>
+                    <a href="#actpass" class="pf-card wide reveal">
+                        <span class="pf-tag">Live</span>
+                        <div class="pf-icon"><svg><use href="#i-gavel"/></svg></div>
+                        <span class="kicker">ActPass · Agent Governance</span>
+                        <h3>Guardrails for autonomous AI agents</h3>
+                        <p>ActPass sits between AI agents and their tools. Every refund, deploy, or email gets a
+                            deterministic allow / deny / needs-approval decision — signed and recorded in a
+                            tamper-evident evidence chain your auditors can verify.</p>
+                        <span class="pf-foot">How it works <svg><use href="#i-arrow"/></svg></span>
+                    </a>
+                    <a href="#research" class="pf-card reveal">
+                        <span class="pf-tag">Research</span>
+                        <div class="pf-icon"><svg><use href="#i-dna"/></svg></div>
+                        <span class="kicker">Fannin · Life Sciences</span>
+                        <h3>AI-driven raptamer discovery</h3>
+                        <p>Applying machine learning to next-generation aptamers — accelerating the discovery of
+                            high-affinity binders for therapeutic and diagnostic use.</p>
+                        <span class="pf-foot">Explore the science <svg><use href="#i-arrow"/></svg></span>
+                    </a>
+                    <a href="#model" class="pf-card reveal">
+                        <span class="pf-tag">Model</span>
+                        <div class="pf-icon"><svg><use href="#i-refresh"/></svg></div>
+                        <span class="kicker">The Mendel model</span>
+                        <h3>Product revenue funds research</h3>
+                        <p>Cash-generating AI products underwrite long-horizon scientific work — a self-sustaining engine
+                            for compounding value.</p>
+                        <span class="pf-foot">See the flywheel <svg><use href="#i-arrow"/></svg></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ONENEW PLATFORM ===== -->
+        <section id="platform" class="section" style="background:var(--bg-soft);">
+            <div class="container">
+                <div class="split">
+                    <div class="split-text reveal">
+                        <span class="eyebrow">OneNew · onenew.ai</span>
+                        <h2 style="font-size:clamp(1.9rem,3.6vw,2.9rem);margin-bottom:1rem;">Private AI that runs on
+                            <em style="font-style:normal;color:var(--teal);">your</em> cloud — not ours.</h2>
+                        <p style="font-size:1.12rem;color:var(--muted);">OneNew is a fully managed, private AI workspace
+                            that deploys onto your own sovereign infrastructure. You get the productivity of a modern AI
+                            assistant with the control posture a regulated organization requires — from agreement to a
+                            live portal in days.</p>
+                        <div class="feature-list">
+                            <div class="fl">
+                                <div class="ic"><svg><use href="#i-lock"/></svg></div>
+                                <div><h4>Managed privacy, retained ownership</h4><p>Mendel manages the infrastructure and
+                                    security patching; you retain full ownership of your data at all times.</p></div>
                             </div>
-                            <div class="mockup-content">
-                                <div class="chat-bubble left">How can I use our genomic data?</div>
-                                <div class="chat-bubble right">I can help you analyze the latest variant calling reports
-                                    using our secure RAG framework.</div>
-                                <div class="chat-bubble left">What are the key findings?</div>
+                            <div class="fl">
+                                <div class="ic"><svg><use href="#i-doc"/></svg></div>
+                                <div><h4>Compliance built in</h4><p>Native SOC 2 &amp; HIPAA-aligned controls, standardized
+                                    MSA, and a BAA for healthcare clients — coverage from day one.</p></div>
+                            </div>
+                            <div class="fl">
+                                <div class="ic"><svg><use href="#i-bolt"/></svg></div>
+                                <div><h4>Provisioned in minutes</h4><p>A dedicated portal at <code style="font-family:var(--font-mono);font-size:0.85em;">portal.onenew.ai</code>
+                                    is stood up in minutes, with SSO for your whole team — no complex cloud setup.</p></div>
+                            </div>
+                        </div>
+                        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+                            <a href="https://www.onenew.ai/" class="btn btn-dark" target="_blank" rel="noopener">Visit onenew.ai <svg><use href="#i-arrow"/></svg></a>
+                            <a href="https://www.onenew.ai/demo" class="btn btn-ghost" target="_blank" rel="noopener">Free trial</a>
+                        </div>
+                    </div>
+                    <div class="split-visual reveal">
+                        <div class="window">
+                            <div class="win-bar">
+                                <div class="win-dots"><span></span><span></span><span></span></div>
+                                <div class="win-url"><svg><use href="#i-lock"/></svg> portal.onenew.ai</div>
+                            </div>
+                            <div class="win-body">
+                                <div class="bubble u">Summarize our Q2 clinical safety reports and flag any new adverse-event signals.</div>
+                                <div class="bubble a">Three reports processed inside your private tenant. One new signal
+                                    appears in cohort B, first noted 12 May.
+                                    <span class="cite"><svg><use href="#i-doc"/></svg> 3 sources · retrieved privately</span>
+                                </div>
+                                <div class="bubble u">Which report, and who signed off?</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-products -->
+                <div style="margin-top:5rem;" class="reveal">
+                    <div class="section-head center" style="margin-bottom:2.4rem;">
+                        <h2 style="font-size:1.9rem;">Three surfaces, one private platform</h2>
+                        <p>Whether your users are people, applications, or retrieval pipelines, OneNew meets them where
+                            they work.</p>
+                    </div>
+                    <div class="subproducts">
+                        <div class="subproduct">
+                            <div class="nm"><svg><use href="#i-workspace"/></svg> OneNew Workspace</div>
+                            <p>The private AI workspace for teams — document chat, secure knowledge, and everyday AI
+                                inside your own tenant, behind SSO.</p>
+                        </div>
+                        <div class="subproduct">
+                            <div class="nm"><svg><use href="#i-api"/></svg> OneNew API</div>
+                            <p>Programmatic access to the same private models and retrieval — so your own applications can
+                                build on OneNew without sending data outside your walls.</p>
+                        </div>
+                        <div class="subproduct">
+                            <div class="nm"><svg><use href="#i-db"/></svg> OneNew DB</div>
+                            <p>The managed vector and knowledge layer that powers grounded, retrieval-augmented answers —
+                                encrypted, tenant-isolated, and fully yours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ONENEW: HOW IT WORKS (dark) ===== -->
+        <section class="section on-dark">
+            <div class="container">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">How OneNew works</span>
+                    <h2>From agreement to deployment in days, not months.</h2>
+                    <p>We handle the heavy lifting so your team can start working with private AI almost immediately.</p>
+                </div>
+                <div class="steps">
+                    <div class="step reveal">
+                        <div class="num">STEP 01</div>
+                        <h4>Legal &amp; compliance</h4>
+                        <p>We execute a standardized MSA. For healthcare clients, we include a BAA for full compliance
+                            cover — no bespoke legal drag.</p>
+                    </div>
+                    <div class="step reveal">
+                        <div class="num">STEP 02</div>
+                        <h4>Connect your data</h4>
+                        <p>Securely upload documents or connect existing sources through encrypted pipelines. Your data
+                            stays in your environment.</p>
+                    </div>
+                    <div class="step reveal">
+                        <div class="num">STEP 03</div>
+                        <h4>Launch your portal</h4>
+                        <p>Your dedicated <code style="font-family:var(--font-mono);color:var(--teal-bright);">portal.onenew.ai</code>
+                            instance goes live. Your team signs in via SSO and starts working.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ACTPASS ===== -->
+        <section id="actpass" class="section">
+            <div class="container">
+                <div class="split reverse">
+                    <div class="split-visual reveal">
+                        <div class="decision">
+                            <div class="row">
+                                <span><span class="action">refund.issue</span><span class="amt">$50</span></span>
+                                <span class="verdict allow"><svg><use href="#i-check"/></svg> Allow</span>
+                            </div>
+                            <div class="row">
+                                <span><span class="action">refund.issue</span><span class="amt">$149</span></span>
+                                <span class="verdict review"><svg><use href="#i-warn"/></svg> Needs approval</span>
+                            </div>
+                            <div class="row">
+                                <span><span class="action">refund.issue</span><span class="amt">$700</span></span>
+                                <span class="verdict deny"><svg><use href="#i-x"/></svg> Deny</span>
+                            </div>
+                            <div class="foot">
+                                <svg><use href="#i-seal"/></svg> Each decision is signed into a hash-chained ledger — verifiable end to end.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split-text reveal">
+                        <span class="eyebrow">ActPass · actpass.org</span>
+                        <h2 style="font-size:clamp(1.9rem,3.6vw,2.9rem);margin-bottom:1rem;">Stop risky agent actions
+                            <em style="font-style:normal;color:var(--teal);">before</em> they execute.</h2>
+                        <p style="font-size:1.12rem;color:var(--muted);">As organizations hand real authority to AI
+                            agents, "trust me" is not a control. ActPass sits between your agents and their tools and
+                            turns every consequential action into a deterministic, signed decision — with a paper trail
+                            auditors can actually verify.</p>
+                        <div class="feature-list">
+                            <div class="fl">
+                                <div class="ic"><svg><use href="#i-gavel"/></svg></div>
+                                <div><h4>Deterministic policy, capability by capability</h4><p>Define exactly what an agent
+                                    may do in each system — the same policy the SDK enforces at runtime.</p></div>
+                            </div>
+                            <div class="fl">
+                                <div class="ic"><svg><use href="#i-chart"/></svg></div>
+                                <div><h4>Blast-radius limits</h4><p>Quantitative guardrails — max spend per transaction,
+                                    rate limits per hour — contain damage even when an agent misbehaves.</p></div>
+                            </div>
+                            <div class="fl">
+                                <div class="ic"><svg><use href="#i-seal"/></svg></div>
+                                <div><h4>Tamper-evident evidence chain</h4><p>Every allow, deny, or approval is issued as a
+                                    signed Action Passport and sealed into a hash-chained ledger — replay-proof and
+                                    verifiable.</p></div>
+                            </div>
+                        </div>
+                        <div style="margin-top:2rem;">
+                            <a href="https://www.actpass.org/" class="btn btn-dark" target="_blank" rel="noopener">See a live decision <svg><use href="#i-arrow"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RESEARCH / FANNIN ===== -->
+        <section id="research" class="section" style="background:var(--bg-soft);">
+            <div class="container">
+                <div class="split">
+                    <div class="split-text reveal">
+                        <span class="eyebrow">Research · with Fannin</span>
+                        <h2 style="font-size:clamp(1.9rem,3.6vw,2.9rem);margin-bottom:1rem;">AI-driven raptamer
+                            discovery for the life sciences.</h2>
+                        <p style="font-size:1.12rem;color:var(--muted);">Raptamers™ are next-generation aptamers —
+                            DNA molecules engineered with protein-like modifications for higher affinity and more
+                            specific target binding. In partnership with Fannin, we apply modern machine learning to
+                            compress the discovery cycle: learning the sequence-to-binding landscape to prioritize
+                            candidates against proteins, small molecules, and whole cells.</p>
+                        <div class="feature-list">
+                            <div class="fl">
+                                <div class="ic"><svg><use href="#i-search"/></svg></div>
+                                <div><h4>Model-guided candidate selection</h4><p>ML models rank and design binders,
+                                    focusing wet-lab effort on the sequences most likely to succeed.</p></div>
+                            </div>
+                            <div class="fl">
+                                <div class="ic"><svg><use href="#i-flask"/></svg></div>
+                                <div><h4>Therapeutic &amp; diagnostic reach</h4><p>Raptamers span therapeutics,
+                                    diagnostics, and research tools — a versatile modality across disease areas.</p></div>
+                            </div>
+                            <div class="fl">
+                                <div class="ic"><svg><use href="#i-refresh"/></svg></div>
+                                <div><h4>A learning loop</h4><p>Every assay result feeds back into the models, compounding
+                                    discovery advantage over successive rounds.</p></div>
+                            </div>
+                        </div>
+                        <div style="margin-top:2rem;">
+                            <a href="https://www.fannininnovation.com/" class="btn btn-ghost" target="_blank" rel="noopener">About Fannin <svg><use href="#i-arrow"/></svg></a>
+                        </div>
+                    </div>
+                    <div class="split-visual reveal">
+                        <div class="window">
+                            <div class="win-bar">
+                                <div class="win-dots"><span></span><span></span><span></span></div>
+                                <div class="win-url"><svg><use href="#i-dna"/></svg> raptamer-discovery · run&nbsp;#0428</div>
+                            </div>
+                            <div class="win-body" style="gap:0.7rem;">
+                                <div class="bubble a" style="max-width:100%;font-family:var(--font-mono);font-size:0.8rem;">
+                                    library&nbsp;→&nbsp;model&nbsp;→&nbsp;rank&nbsp;→&nbsp;assay&nbsp;→&nbsp;learn</div>
+                                <div class="bubble a" style="max-width:100%;">
+                                    <b style="color:var(--ink);">Top candidate</b> · predicted K<sub>d</sub> in the low-nanomolar range
+                                    <span class="cite"><svg><use href="#i-check"/></svg> flagged for synthesis</span>
+                                </div>
+                                <div class="bubble a" style="max-width:100%;">
+                                    <b style="color:var(--ink);">Round 4</b> · enrichment improving vs. baseline — models updated on new binding data</div>
                             </div>
                         </div>
                     </div>
@@ -90,72 +385,101 @@
             </div>
         </section>
 
-        <section id="about" class="about">
+        <!-- ===== MODEL / FLYWHEEL (dark) ===== -->
+        <section id="model" class="section on-dark">
             <div class="container">
-                <div class="section-header">
-                    <h2>The Mendel Mission</h2>
-                    <div class="underline"></div>
+                <div class="section-head center reveal">
+                    <span class="eyebrow">The Mendel model</span>
+                    <h2>Product revenue compounds into research.</h2>
+                    <p>Mendel operates at the intersection of near-term market utility and long-horizon scientific value.
+                        Cash-generating AI products fund foundational work — and that research sharpens the products.</p>
                 </div>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>Mendel Info Labs operates at the intersection of immediate market utility and long-horizon
-                            scientific value. We monetize focused AI products like OneNewAI to sustainably fund our
-                            foundational research in AGI and bioinformatics.</p>
-                        <p>Our model ensures that every subscription contributes directly to building modular
-                            transformer architectures and predictive models for life sciences, creating a
-                            self-sustaining ecosystem for breakthrough innovation.</p>
+                <div class="mission-flow reveal">
+                    <div class="flow-node">
+                        <div class="ic"><svg><use href="#i-shield"/></svg></div>
+                        <h4>Ship trust-first AI</h4>
+                        <p>OneNew &amp; ActPass serve regulated customers with privacy and proof built in.</p>
                     </div>
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <h3>Product</h3>
-                            <p>Revenue-Funded</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3>Research</h3>
-                            <p>Long-Horizon</p>
-                        </div>
+                    <div class="flow-arrow"><svg><use href="#i-arrow"/></svg></div>
+                    <div class="flow-node">
+                        <div class="ic"><svg><use href="#i-chart"/></svg></div>
+                        <h4>Generate revenue</h4>
+                        <p>Recurring product income underwrites long-horizon programs without diluting focus.</p>
                     </div>
+                    <div class="flow-arrow"><svg><use href="#i-arrow"/></svg></div>
+                    <div class="flow-node">
+                        <div class="ic"><svg><use href="#i-dna"/></svg></div>
+                        <h4>Fund deep-tech research</h4>
+                        <p>AI-for-bio and reasoning research advance — and feed back into the platform.</p>
+                    </div>
+                </div>
+                <div class="metrics reveal" style="margin-top:4rem;">
+                    <div class="metric"><div class="big">Private</div><div class="lbl">by architecture, not policy</div></div>
+                    <div class="metric"><div class="big">2</div><div class="lbl">product lines, live today</div></div>
+                    <div class="metric"><div class="big">1</div><div class="lbl">deep-tech research program</div></div>
+                    <div class="metric"><div class="big">Verifiable</div><div class="lbl">audit trails end to end</div></div>
                 </div>
             </div>
         </section>
 
-        <section id="research" class="research">
+        <!-- ===== TEAM PREVIEW ===== -->
+        <section id="team" class="section">
             <div class="container">
-                <div class="section-header">
-                    <h2>Research Pillars</h2>
-                    <div class="underline"></div>
+                <div class="section-head center reveal">
+                    <span class="eyebrow">Leadership</span>
+                    <h2>Operators and scientists who have built before.</h2>
+                    <p>Mendel is led by a team spanning enterprise AI, company-building, and the life sciences.</p>
                 </div>
-                <div class="research-grid">
-                    <div class="research-card">
-                        <span class="icon">🧠</span>
-                        <h3>Reasoning for AGI</h3>
-                        <p>Investigating modular transformer architectures for decomposed tasks and advancing
-                            low-resource reasoning with structured symbolic scaffolding.</p>
+                <div class="team-grid reveal">
+                    <div class="team-card">
+                        <div class="team-avatar">LL</div>
+                        <h3>Leo Linbeck</h3>
+                        <div class="role">Chief Executive Officer</div>
+                        <p class="bio">Sets the strategic direction of Mendel Info Labs, bringing decades of experience
+                            building and scaling ventures across technology and the life sciences.</p>
+                        <a class="li" href="https://www.linkedin.com/in/leo-linbeck-88482127/" target="_blank" rel="noopener">
+                            <svg><use href="#i-li"/></svg> LinkedIn</a>
                     </div>
-                    <div class="research-card">
-                        <span class="icon">🧬</span>
-                        <h3>AI for Bioinformatics</h3>
-                        <p>Developing LLM-tuned pipelines for protein annotation and predictive models for
-                            omics-to-phenotype translation.</p>
+                    <div class="team-card">
+                        <div class="team-avatar">LL</div>
+                        <h3>Leo Linbeck</h3>
+                        <div class="role">Chief Financial Officer</div>
+                        <p class="bio">Leads financial strategy and stewardship, structuring the model that lets product
+                            revenue sustainably fund long-horizon research.</p>
+                        <a class="li" href="https://www.linkedin.com/in/leo-linbeck/" target="_blank" rel="noopener">
+                            <svg><use href="#i-li"/></svg> LinkedIn</a>
                     </div>
+                    <div class="team-card">
+                        <div class="team-avatar">AG</div>
+                        <h3>Aki Gogikar</h3>
+                        <div class="role">Executive Vice President</div>
+                        <p class="bio">Drives product and engineering across the OneNew suite and ActPass, turning
+                            frontier AI into shippable, trust-first software for regulated industries.</p>
+                        <a class="li" href="https://www.linkedin.com/in/akigogikar/" target="_blank" rel="noopener">
+                            <svg><use href="#i-li"/></svg> LinkedIn</a>
+                    </div>
+                </div>
+                <div style="text-align:center;margin-top:2.6rem;" class="reveal">
+                    <a href="team.html" class="btn btn-ghost">Meet the full team <svg><use href="#i-arrow"/></svg></a>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="section" style="padding-bottom:7rem;">
             <div class="container">
-                <div class="contact-card">
-                    <div class="contact-info">
-                        <h2>Collaborate With Us</h2>
-                        <p>We are always looking for partners in industry and academia to push the boundaries of
-                            information science.</p>
-                        <div class="contact-detail">
-                            <span>📧</span>
-                            <a href="mailto:info@mendelinfolabs.com">info@mendelinfolabs.com</a>
-                        </div>
+                <div class="contact-card reveal">
+                    <div class="ci">
+                        <span class="eyebrow" style="color:var(--teal-bright);">Get in touch</span>
+                        <h2>Evaluating Mendel, OneNew, or ActPass?</h2>
+                        <p>We work with partners in industry and academia, and welcome serious inquiries around
+                            partnership, deployment, and diligence. Reach out and we'll respond quickly.</p>
+                        <a class="contact-detail" href="mailto:info@mendelinfolabs.com">
+                            <svg><use href="#i-mail"/></svg> info@mendelinfolabs.com</a>
                     </div>
                     <div class="contact-action">
-                        <a href="mailto:info@mendelinfolabs.com" class="btn btn-secondary large">Get In Touch</a>
+                        <a href="mailto:info@mendelinfolabs.com?subject=Mendel%20Info%20Labs%20Inquiry" class="btn btn-primary btn-lg">Contact the team <svg><use href="#i-arrow"/></svg></a>
+                        <a href="mailto:aki@onenew.ai?subject=OneNew%20Access%20Request" class="btn btn-ghost btn-lg">Request OneNew access</a>
                     </div>
                 </div>
             </div>
@@ -163,17 +487,45 @@
     </main>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <img src="logo.png" alt="Mendel Info Labs Logo" class="footer-logo-img">
-                <p>&copy; 2026 Mendel Info Labs LLC. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Mendel Info Labs">
+                    <p>A research-driven venture studio building trust-first AI products and advancing AI for the life
+                        sciences.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Products</h5>
+                    <ul>
+                        <li><a href="https://www.onenew.ai/" target="_blank" rel="noopener">OneNew Workspace</a></li>
+                        <li><a href="#platform">OneNew API</a></li>
+                        <li><a href="#platform">OneNew DB</a></li>
+                        <li><a href="https://www.actpass.org/" target="_blank" rel="noopener">ActPass</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#model">Our model</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year">2026</span> Mendel Info Labs LLC. All rights reserved.</span>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/akigogikar/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a>
+                    <a href="mailto:info@mendelinfolabs.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+                </div>
             </div>
         </div>
     </footer>
