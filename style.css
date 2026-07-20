@@ -737,6 +737,9 @@ nav {
     padding: 2.2rem;
     transition: var(--transition);
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
 .team-avatar {
@@ -764,6 +767,7 @@ nav {
     margin-bottom: 1rem;
 }
 .team-card .bio { font-size: 0.95rem; color: var(--slate); margin-bottom: 1.4rem; }
+.team-card .li { margin-top: auto; }
 .team-card .li {
     display: inline-flex;
     align-items: center;
