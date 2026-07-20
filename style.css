@@ -32,8 +32,8 @@
     --d-line: rgba(255, 255, 255, 0.12);
     --d-card: rgba(255, 255, 255, 0.045);
 
-    --container: 1200px;
-    --container-wide: 1320px;
+    --container: 1280px;
+    --container-wide: 1400px;
     --radius: 14px;
     --radius-lg: 22px;
     --radius-xl: 30px;
@@ -245,9 +245,9 @@ nav {
 }
 .logo { display: flex; align-items: center; text-decoration: none; }
 .logo img {
-    height: 46px;
+    height: 58px;
     width: auto;
-    max-width: 210px;
+    max-width: 260px;
     object-fit: contain;
     transition: var(--transition);
 }
@@ -310,7 +310,7 @@ nav {
     pointer-events: none;
 }
 .hero .container { position: relative; z-index: 2; }
-.hero-inner { max-width: 880px; }
+.hero-inner { max-width: 980px; }
 
 .hero-badge {
     display: inline-flex;
@@ -912,6 +912,7 @@ footer {
 }
 @media (max-width: 760px) {
     .section { padding: 5rem 0; }
+    .logo img { height: 46px; max-width: 210px; }
     .badge-tail { display: none; }
     .hero-badge { border-radius: 12px; }
     .nav-links {
