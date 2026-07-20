@@ -244,10 +244,11 @@ nav {
     height: 74px;
 }
 .logo { display: flex; align-items: center; text-decoration: none; }
+/* logo.png is trimmed to its ink, so height maps 1:1 to the visible mark
+   (aspect 2.55). Changing this value scales the wordmark directly. */
 .logo img {
-    height: 58px;
+    height: 36px;
     width: auto;
-    max-width: 260px;
     object-fit: contain;
     transition: var(--transition);
 }
@@ -856,7 +857,7 @@ footer {
     padding-bottom: 3rem;
     border-bottom: 1px solid var(--d-line);
 }
-.footer-brand img { height: 42px; margin-bottom: 1.2rem; }
+.footer-brand img { height: 34px; margin-bottom: 1.2rem; }
 .footer-brand p { font-size: 0.92rem; max-width: 300px; }
 .footer-col h5 {
     color: #fff;
@@ -912,7 +913,7 @@ footer {
 }
 @media (max-width: 760px) {
     .section { padding: 5rem 0; }
-    .logo img { height: 46px; max-width: 210px; }
+    .logo img { height: 30px; }
     .badge-tail { display: none; }
     .hero-badge { border-radius: 12px; }
     .nav-links {
