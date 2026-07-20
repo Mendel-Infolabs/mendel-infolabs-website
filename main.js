@@ -36,8 +36,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== Scroll reveal via IntersectionObserver =====
+// Progressive enhancement: content is visible by default. We only opt in to
+// the hidden-until-revealed state (html.js-reveal) when the observer can
+// actually fire — i.e. IO is supported, the viewport has real height, and
+// the user hasn't asked for reduced motion. This prevents a permanently
+// blank page in prerenderers, zero-height webviews, or headless renderers.
 const reveals = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window && reveals.length) {
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if ('IntersectionObserver' in window && reveals.length &&
+    window.innerHeight > 0 && !reduceMotion) {
+    document.documentElement.classList.add('js-reveal');
     const io = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -47,8 +55,13 @@ if ('IntersectionObserver' in window && reveals.length) {
         });
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     reveals.forEach(el => io.observe(el));
-} else {
-    reveals.forEach(el => el.classList.add('in'));
+    // Safety net: if nothing has intersected shortly after load (broken
+    // viewport metrics, aggressive iframe throttling), reveal everything.
+    setTimeout(() => {
+        if (!document.querySelector('.reveal.in')) {
+            document.documentElement.classList.remove('js-reveal');
+        }
+    }, 2500);
 }
 
 // ===== Current year in footer =====
