@@ -760,11 +760,12 @@ nav {
 }
 .team-avatar img {
     width: 100%;
-    height: 100%;
+    height: 72px;
     object-fit: cover;
     object-position: center top;
     display: block;
 }
+.team-avatar .portrait-leo-iii { transform: scale(1.25); transform-origin: center top; }
 .team-card h3 { font-size: 1.28rem; margin-bottom: 0.25rem; }
 .team-card .role {
     font-family: var(--font-mono);
